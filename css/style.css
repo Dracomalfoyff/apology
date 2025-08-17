@@ -1,0 +1,157 @@
+#bg-gradient, #rainbow-anim-layer, #star-sparkle-layer, #lovebird-layer {
+  position: fixed;
+  inset: 0;
+  width: 100vw; height: 100vh;
+  pointer-events: none;
+}
+#bg-gradient { z-index: 0; }
+#rainbow-anim-layer { z-index: 2; }
+#star-sparkle-layer { z-index: 2.5; }
+#lovebird-layer { z-index: 2.6; }
+#particles-layer {
+  position: fixed;
+  top: 0; left:0;
+  width: 100vw; height: 100vh;
+  z-index: 3;
+  pointer-events: none;
+}
+.main-card {
+  z-index: 10;
+  position: relative;
+  max-width: 440px;
+  margin: 8vh auto 0 auto;
+  background: linear-gradient(140deg,rgba(255,255,255,0.37) 40%, rgba(252,101,166,0.18) 100%);
+  border-radius: 44px;
+  box-shadow: 0 12px 48px #ee3e857b, 0 0 0 2.9px #fff4;
+  padding: 3.7rem 2.2rem 2.4rem 2.2rem;
+  text-align: center;
+  border: 2.5px solid rgba(245,132,178,0.11);
+  backdrop-filter: blur(15px) saturate(120%);
+  -webkit-backdrop-filter: blur(15px) saturate(120%);
+  animation: cardDropFade 1.5s cubic-bezier(.22,1,.32,1);
+  transition: box-shadow 0.2s;
+}
+@keyframes cardDropFade {
+  0% { transform: translateY(-80px) scale(0.96); opacity: 0;}
+  85% {transform: translateY(10px) scale(1.04);}
+  100% { transform: none; opacity: 1;}
+}
+.star-glass {
+  box-shadow: 0 2px 36px #de477a33, 0 10px 48px #fff7;
+}
+.headline-glow { margin-bottom: 0.6em; }
+.hero-title {
+  font-family: 'Dancing Script', cursive;
+  color: #fe65a6;
+  font-size: 2.8em;
+  line-height: 1.14;
+  margin: 0;
+  letter-spacing: 0.01em;
+  text-shadow: 0 5px 30px #fddbe0bb;
+  background: linear-gradient(90deg, #fd90ce 20%, #c66cf3 85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.sweep-glow { position: relative; overflow: hidden; }
+.sweep-glow::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -39%; top: 0;
+  width: 78%; height: 100%;
+  background: linear-gradient(120deg, #fffffff5 6%, #ffbada33 58%, transparent 100%);
+  filter: blur(8px);
+  pointer-events: none;
+  animation: shineAcross 2.2s 1.2s cubic-bezier(.12,2.1,.41,1) 1 normal;
+}
+@keyframes shineAcross {
+  0% { left: -70%;}
+  90% { left: 140%;}
+  100% { left: 140%;}
+}
+.poetic-subtitle {
+  font-size: 1.21em;
+  color: #955196;
+  margin-bottom: 2.6em;
+  letter-spacing: 0.01em;
+  font-weight: 500;
+  line-height: 1.44;
+}
+.fade-soft { opacity: 0.72; font-style: italic;}
+.heart-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7em;
+}
+.heart-ico {
+  vertical-align: middle;
+  filter: drop-shadow(0 1px 8px #ff72ca88);
+  margin-right: 0.25em;
+  transition: transform 0.14s cubic-bezier(.2,1.9,0,1);
+}
+.glow-btn {
+  font-family: inherit;
+  background: linear-gradient(90deg, #ff7ebe 19%, #ffb4e4 100%);
+  color: #fff;
+  font-size: 1.15em;
+  padding: 1.05em 2.8em;
+  border: none;
+  border-radius: 120px;
+  box-shadow: 0 9px 42px #d34e9553, 0 3px 0 0 #fff4;
+  cursor: pointer;
+  text-shadow: 0 2px 5px #f39bc841;
+  transition: transform 0.11s, box-shadow 0.18s, background 0.23s;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  animation: btnPulse 2.2s cubic-bezier(.6,0,.56,1.1) infinite alternate;
+  outline: none;
+}
+@keyframes btnPulse {
+  0% { box-shadow: 0 0 0 0 #ffd6e899; }
+  85% { box-shadow: 0 0 0 19px #ffd6e866;}
+  100% { box-shadow: 0 0 0 0 #ffd6e830; }
+}
+.glow-btn:active { transform: scale(0.97); }
+.glow-btn:hover .heart-ico {
+  transform: scale(1.19) rotate(-8deg);
+}
+@media (max-width: 600px) {
+  .main-card {padding: 1.7rem 1em;}
+  .hero-title { font-size: 2.1em;}
+  .poetic-subtitle { font-size: 1em;}
+}
+.soft-spark-heart {
+  filter: drop-shadow(0 8px 32px #ff70b8cc) drop-shadow(0 1px 10px #fff1);
+  will-change: transform, opacity;
+}
+.twinkle-star {
+  position: absolute;
+  width: 20px; height: 20px;
+  opacity: 0.85;
+  pointer-events: none;
+  filter: blur(0.5px) drop-shadow(0 0 6px #fff7);
+}
+#lovebird-layer .lovebirds {
+  position: absolute; width: 84px; height: 52px;
+  will-change: transform, opacity;
+  left: 4vw; top: 80vh;
+}
+.activated-glow {
+  animation: lovePulse 2s infinite alternate ease-in-out;
+}
+
+@keyframes lovePulse {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 87, 145, 0.6),
+                0 0 30px rgba(255, 87, 145, 0.3);
+    transform: scale(1);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(255, 87, 145, 0.9),
+                0 0 50px rgba(255, 87, 145, 0.5);
+    transform: scale(1.05);
+  }
+}
