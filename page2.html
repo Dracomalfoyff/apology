@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Deepest Regret</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/page2-premium.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <!-- Main container -->
+  <div id="sorry-experience">
+    
+    <!-- Chapter progression indicator -->
+    <div class="chapter-indicator">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="chapter-dots">
+        <span class="dot active" data-chapter="1"></span>
+        <span class="dot" data-chapter="2"></span>
+        <span class="dot" data-chapter="3"></span>
+        <span class="dot" data-chapter="4"></span>
+      </div>
+    </div>
+
+    <!-- 3D Background Canvas -->
+    <canvas id="backgroundCanvas"></canvas>
+    
+    <!-- Emotional overlay effects -->
+    <div id="emotionalOverlay">
+      <div class="rain-container" id="sorryRain"></div>
+      <div class="floating-words" id="floatingWords"></div>
+    </div>
+
+    <!-- Main content stages -->
+    <div class="content-stage" id="stage1" data-stage="1">
+      <div class="stage-content">
+        <h1 class="morphing-text" id="mainSorry">SORRY</h1>
+        <div class="subtitle-container">
+          <p class="cinematic-subtitle">isn't just a word...</p>
+          <p class="cinematic-subtitle delayed">it's the echo of my breaking heart</p>
+        </div>
+        <div class="interaction-prompt">
+          <span>Click anywhere to feel my regret</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-stage" id="stage2" data-stage="2">
+      <div class="stage-content">
+        <div class="confession-container">
+          <h2 class="confession-title">I realize now...</h2>
+          <div class="confession-text">
+            <p class="confession-line" data-delay="0">Every harsh word I spoke</p>
+            <p class="confession-line" data-delay="800">Every moment I took you for granted</p>
+            <p class="confession-line" data-delay="1600">Every time I chose pride over love</p>
+            <p class="confession-line final" data-delay="2400">Has left scars on both our hearts</p>
+          </div>
+        </div>
+        <div class="emotional-meter">
+          <div class="meter-label">Depth of Regret</div>
+          <div class="meter-bar">
+            <div class="meter-fill" id="regretMeter"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-stage" id="stage3" data-stage="3">
+      <div class="stage-content">
+        <div class="memory-reconstruction">
+          <h2 class="memory-title">If I could rewrite our story...</h2>
+          <div class="memory-frames">
+            <div class="memory-frame" data-memory="1">
+              <div class="memory-content">
+                <div class="memory-before">What I did: Called you Moti in Front of My Mom and Bother in fun</div>
+                <div class="memory-after">What I should have to do: Never make fun of you in front of anyone</div>
+              </div>
+            </div>
+            <div class="memory-frame" data-memory="2">
+              <div class="memory-content">
+                <div class="memory-before">What I did: Let my ego control our arguments</div>
+                <div class="memory-after">What I should have done: Listened with warmth and understanding</div>
+              </div>
+            </div>
+            <div class="memory-frame" data-memory="3">
+              <div class="memory-content">
+                <div class="memory-before">What I did: Made you feel ignored</div>
+                <div class="memory-after">What I should have done: Valued you more than before</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-stage" id="stage4" data-stage="4">
+      <div class="stage-content">
+        <div class="redemption-pledge">
+          <h2 class="pledge-title">My Promise to You</h2>
+          <div class="promise-container">
+            <div class="promise-item">
+              <div class="promise-icon">💝</div>
+              <div class="promise-text">I will Never hurt you again</div>
+            </div>
+            <div class="promise-item">
+              <div class="promise-icon">🌱</div>
+              <div class="promise-text">I will never do this again</div>
+            </div>
+            <div class="promise-item">
+              <div class="promise-icon">💫</div>
+              <div class="promise-text">I will never called you "Moti" in front of anyone</div>
+            </div>
+          </div>
+          
+          <div class="final-message">
+            <p>This isn't just an apology—it's a commitment to becoming the person you deserve.</p>
+          </div>
+          
+          <button id="acceptJourney" class="journey-btn">
+            <span class="btn-text">Continue Our Journey</span>
+            <div class="btn-ripple"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="loveIntroPage2" src="assets/audio/heartbeat.mp3" preload="auto" loop></audio>
+  </div>
+
+  <script src="js/page2-premium.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

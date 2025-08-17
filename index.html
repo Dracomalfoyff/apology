@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A Message From My Heart</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <!-- Anime.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+</head>
+<body>
+  <!-- 🌸 Romantic Music Consent Overlay -->
+<div id="musicOverlay" 
+     style="position:fixed;top:0;left:0;width:100%;height:100%;
+            background:linear-gradient(135deg, rgba(255,87,145,0.95), rgba(120,0,80,0.9));
+            display:flex;justify-content:center;align-items:center;z-index:9999;
+            flex-direction:column;color:white;font-family:'Dancing Script', cursive;
+            text-align:center;">
+
+  <!-- Floating hearts background effect -->
+  <div id="floatingHearts" 
+       style="position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;z-index:-1;">
+  </div>
+
+  <h2 style="font-size:2.5rem;margin-bottom:20px;text-shadow:0 0 12px rgba(255,200,220,0.9);">
+    🌹 My Love, Shall We Begin with Music? 🎶
+  </h2>
+  <p style="font-size:1.2rem;margin-bottom:30px;opacity:0.85;">
+    Let your heart be carried on a melody as this journey starts 💕
+  </p>
+
+  <button id="yesMusic" 
+          style="padding:14px 36px;font-size:20px;border:none;border-radius:30px;
+                 background:linear-gradient(135deg,#ff79a8,#ff3d8b);
+                 color:white;cursor:pointer;box-shadow:0 0 20px rgba(255,87,145,0.6);
+                 transition:all 0.3s ease;">
+    💖 Yes, let the music play
+  </button>
+
+  <button id="noMusic" 
+          style="margin-top:15px;padding:12px 28px;font-size:16px;border:none;
+                 border-radius:30px;background:#555;color:white;cursor:pointer;
+                 opacity:0.8;transition:all 0.3s ease;">
+    🚫 No, I’ll walk in silence
+  </button>
+</div>
+
+<script>
+// Floating heart animation
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.innerHTML = "💖";
+  heart.style.position = "absolute";
+  heart.style.fontSize = Math.random() * 24 + 16 + "px";
+  heart.style.left = Math.random() * 100 + "%";
+  heart.style.top = "100%";
+  heart.style.opacity = 0.8;
+  heart.style.animation = `floatUp ${6 + Math.random()*4}s linear forwards`;
+  document.getElementById("floatingHearts").appendChild(heart);
+
+  setTimeout(() => heart.remove(), 10000);
+}
+setInterval(createHeart, 1000);
+
+// Floating hearts animation
+const style = document.createElement("style");
+style.textContent = `
+@keyframes floatUp {
+  0% { transform:translateY(0) scale(1); opacity:0.8; }
+  100% { transform:translateY(-110vh) scale(1.5); opacity:0; }
+}
+#yesMusic:hover {
+  transform:scale(1.05);
+  box-shadow:0 0 30px rgba(255,87,145,0.9);
+}
+#noMusic:hover {
+  transform:scale(1.05);
+  background:#777;
+}
+`;
+document.head.appendChild(style);
+</script>
+
+  
+  <!-- Swirling pastel gradient overlay for extra magic -->
+  <canvas id="bg-gradient"></canvas>
+  <!-- Animated rainbow overlay -->
+  <svg id="rainbow-anim-layer"></svg>
+  <!-- Twinkle stars overlay -->
+  <div id="star-sparkle-layer"></div>
+  <!-- Floating lovebirds overlay -->
+  <div id="lovebird-layer"></div>
+  <!-- Animated heart particles overlay -->
+  <div id="particles-layer"></div>
+  <!-- Main romantic card -->
+  <main class="main-card star-glass" id="mainCard">
+    <div class="headline-glow">
+      <h1 class="hero-title sweep-glow">
+        In This Moment,<br>
+        My Heart Speaks
+      </h1>
+    </div>
+    <p class="poetic-subtitle">
+      To love you is to breathe—the air, the dream, the everything.<br>
+      <span class="fade-soft">Tonight, my feelings dance for you.</span>
+    </p>
+    <button id="beginBtn" class="glow-btn heart-btn">
+      <svg class="heart-ico" width="26" height="24" viewBox="0 0 32 29">
+        <path d="M23.6,2.6c-2.7,0-4.9,2-5.6,4.8C17.3,4.6,15,2.6,12.4,2.6C8.7,2.6,5.7,5.7,5.7,9.3c0,6.9,10.1,15.2,10.6,15.6c0.2,0.2,0.5,0.2,0.7,0C18.2,24.5,28.3,16.2,28.3,9.3C28.3,5.7,25.3,2.6,21.6,2.6z"
+        fill="#ff5791" stroke="#ed2678" stroke-width="1.5"/>
+      </svg>
+      Begin my Apology Journey
+    </button>
+     </main>
+  <!-- Animation scripts -->
+  <script src="js/gradient.js"></script>
+  <script src="js/rainbow-anim.js"></script>
+  <script src="js/sparkles.js"></script>
+  <script src="js/lovebirds.js"></script>
+  <script src="js/particles.js"></script>
+  <audio id="loveIntro" src="assets/audio/romantic_music.mp3" preload="auto" loop></audio>
+  <script src="js/script.js"></script>
+</body>
+</html>

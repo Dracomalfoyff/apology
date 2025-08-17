@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Will You Forgive Me, My Love?</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Great+Vibes:wght@400&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/page5-romantic.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <!-- Romantic dreamy background -->
+  <div class="romantic-sky">
+    <div class="floating-rose-petals" id="rosePetals"></div>
+    <div class="soft-light-orbs" id="lightOrbs"></div>
+    <div class="love-sparkles" id="loveSparkles"></div>
+    <div class="dreamy-hearts" id="dreamyHearts"></div>
+  </div>
+
+  <!-- Main romantic experience -->
+  <div id="romantic-forgiveness">
+    
+    <!-- Main Forgiveness Scene -->
+    <section class="forgiveness-scene" id="forgivenessScene">
+      <div class="love-letter-container">
+        
+        <!-- Cute romantic character -->
+        <div class="romantic-character">
+          <div class="character-wrapper" id="characterWrapper">
+            <div class="love-aura">
+              <div class="aura-ring ring-1"></div>
+              <div class="aura-ring ring-2"></div>
+              <div class="aura-ring ring-3"></div>
+            </div>
+            <div class="character-body">
+              <div class="character-face">
+                <div class="face-glow"></div>
+                <div class="eyes">
+                  <div class="eye left-eye">
+                    <div class="eye-sparkle"></div>
+                    <div class="tear-drop" id="leftTear">💧</div>
+                  </div>
+                  <div class="eye right-eye">
+                    <div class="eye-sparkle"></div>
+                    <div class="tear-drop" id="rightTear">💧</div>
+                  </div>
+                </div>
+                <div class="rosy-cheeks">
+                  <div class="cheek left-cheek">🌸</div>
+                  <div class="cheek right-cheek">🌸</div>
+                </div>
+                <div class="sweet-mouth">😔</div>
+              </div>
+              <div class="pleading-hands">
+                <div class="hand left-hand">🙏</div>
+                <div class="hand right-hand">🙏</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Romantic love letter -->
+        <div class="love-letter">
+          <div class="letter-header">
+            <div class="letter-seal">💕</div>
+            <h1 class="romantic-title">
+              <span class="word">Will</span>
+              <span class="word">You</span>
+              <span class="word">Forgive</span>
+              <span class="word">Me,</span>
+              <span class="word">Darling?</span>
+            </h1>
+          </div>
+          
+          <div class="heartfelt-message">
+            <div class="message-scroll">
+              <p class="love-text">
+                My sweetest love, I know my heart has caused you pain,
+                <br>and for that, I am truly, deeply sorry. 💔
+              </p>
+              <p class="love-text">
+                Every moment without your forgiveness feels like 
+                <br>a lifetime of roses without their bloom. 🌹
+              </p>
+              <div class="romantic-quote">
+                <em>"Love means never having to say you're sorry, but I say it anyway because you mean everything to me."</em>
+              </div>
+            </div>
+          </div>
+
+          <!-- Romantic choice buttons -->
+          <div class="choice-garden">
+            <div class="choice-flowers">
+              <!-- Yes Button -->
+              <div class="flower-choice yes-flower" id="yesFlower">
+                <div class="flower-base">
+                  <div class="flower-petals">
+                    <div class="petal petal-1">🌸</div>
+                    <div class="petal petal-2">🌸</div>
+                    <div class="petal petal-3">🌸</div>
+                    <div class="petal petal-4">🌸</div>
+                    <div class="petal petal-5">🌸</div>
+                  </div>
+                  <div class="flower-center">💖</div>
+                </div>
+                <div class="flower-stem"></div>
+                <div class="choice-label yes-label">Yes, I Forgive You</div>
+                <div class="love-magic"></div>
+              </div>
+              
+              <!-- No Button -->
+              <div class="flower-choice no-flower" id="noFlower">
+                <div class="flower-base">
+                  <div class="flower-petals wilted">
+                    <div class="petal petal-1">🥀</div>
+                    <div class="petal petal-2">🥀</div>
+                    <div class="petal petal-3">🥀</div>
+                    <div class="petal petal-4">🥀</div>
+                    <div class="petal petal-5">🥀</div>
+                  </div>
+                  <div class="flower-center">💔</div>
+                </div>
+                <div class="flower-stem"></div>
+                <div class="choice-label no-label">Not Yet...</div>
+                <div class="sadness-aura"></div>
+              </div>
+            </div>
+            
+            <!-- Sweet encouragement -->
+            <div class="sweet-encouragement" id="sweetEncouragement">
+              <p>Choose with your beautiful heart, my love... 💕</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Love Scene -->
+    <section class="success-love-scene" id="successScene">
+      <div class="celebration-garden">
+        <div class="blooming-flowers" id="bloomingFlowers">
+          <div class="bloom-animation">
+            <div class="blooming-rose">🌹</div>
+            <div class="blooming-petals">
+              <div class="bloom-petal">🌸</div>
+              <div class="bloom-petal">🌸</div>
+              <div class="bloom-petal">🌸</div>
+              <div class="bloom-petal">🌸</div>
+              <div class="bloom-petal">🌸</div>
+              <div class="bloom-petal">🌸</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="success-love-letter">
+          <h2 class="gratitude-title">Etni jaldi kar diya! 💕</h2>
+          <div class="romantic-response">
+            <p class="sweet-message">
+              Chalo koi baat nahi, meri jaan...<br>
+              <span class="special-surprise">Tumhare liye ek last surprise hai! ✨</span>
+            </p>
+          </div>
+          
+          <div class="surprise-gift-box" id="surpriseGift">
+            <div class="gift-box">
+              <div class="gift-bow">🎀</div>
+              <div class="gift-body">🎁</div>
+              <div class="gift-sparkles">
+                <div class="sparkle">✨</div>
+                <div class="sparkle">✨</div>
+                <div class="sparkle">✨</div>
+              </div>
+            </div>
+            <button class="open-gift-btn" id="openGiftBtn">
+              Open My Heart's Gift
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sadness Overlay -->
+    <div class="sadness-overlay" id="sadnessOverlay">
+      <div class="rain-effect" id="rainEffect"></div>
+      <div class="sad-scene">
+        <div class="crying-character">
+          <div class="sad-face">😢</div>
+          <div class="broken-heart">💔</div>
+          <div class="pleading-message">
+            <h3>Please don't break my heart! 💔</h3>
+            <p>I love you more than all the stars in the sky... 🌟</p>
+            <div class="heart-pieces">
+              <div class="piece">💔</div>
+              <div class="piece">💔</div>
+              <div class="piece">💔</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Romantic Video Player -->
+    <div class="romantic-video-theater" id="romanticVideoTheater">
+      <div class="theater-curtains">
+        <div class="curtain left-curtain"></div>
+        <div class="curtain right-curtain"></div>
+      </div>
+      <div class="video-frame">
+        <video id="romanticSurpriseVideo" preload="auto">
+          <source src="assets/videos/final-surprise.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="floating-love-notes" id="floatingLoveNotes">
+        <div class="love-note">💕</div>
+        <div class="love-note">💖</div>
+        <div class="love-note">💝</div>
+        <div class="love-note">🌹</div>
+        <div class="love-note">💐</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Romantic Audio System -->
+  <audio id="loveIntroPage5" src="assets/audio/soft_romantic_piano.mp3" preload="auto" loop></audio>
+  
+  <script src="js/page5-romantic.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
